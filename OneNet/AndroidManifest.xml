@@ -1,0 +1,86 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.app.onenet"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="15" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WRITE_APN_SETTINGS" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- 对外部存储设备的写入权限 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- 对外部文件的写入和删除权限 -->
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <!-- 地理位置权限 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <!-- 拍照 -->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.SYSTEM_OVERLAY_WINDOW" />
+    <!-- 单元测试 -->
+
+    <uses-permission android:name="android.permission.RUN_INSTRUMENTATION" />
+
+    <instrumentation
+        android:name="android.test.InstrumentationTestRunner"
+        android:targetPackage="com.app.onenet" />
+
+    <!--
+    设置所有的activity都是纵向 
+    <uses-feature android:name="android.hardware.screen.portrait" />
+    -->
+
+    <application
+        android:name="com.app.onenet.ApplicationEx"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+
+        <!--
+        服务端的appkey以及appsecret 
+        <meta-data android:name="APP_KEY" android:value="android"/>
+        <meta-data android:name="APP_SECRET" android:value="abc"/>
+        -->
+        <!-- 单元测试 -->
+        <uses-library android:name="android.test.runner" />
+
+        <activity
+            android:name=".activity.LogoActivity"
+            android:label="@string/title_activity" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".activity.MyWeiboActivity" />
+        <activity android:name=".activity.PlatformListActivity" />
+        <activity android:name=".activity.OauthActivity" />
+        <activity android:name=".activity.MyAccountActivity" />
+        <activity android:name=".activity.CallbackActivity" />
+        <activity android:name=".activity.MainActivity"  android:launchMode="singleTask"  />
+        <activity android:name=".activity.HomeActivity" />
+        <activity android:name=".activity.TopActivity" />
+        <activity android:name=".activity.NewWeiboActivity" />
+        <activity android:name=".activity.PersonHomeActivity" />
+        <activity android:name=".activity.ProfileHomeActivity" />
+        <activity android:name=".activity.DetailWeiboActivity" />
+
+        <service android:name="com.app.onenet.service.OneNetService" />
+        <service android:name="com.app.onenet.service.AppUpgradeService" />
+
+        <receiver
+            android:name="com.app.onenet.receiver.NetWorkBroadcastReceiver"
+            android:label="NetworkConnection" >
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>

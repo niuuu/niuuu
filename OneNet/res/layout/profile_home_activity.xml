@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:navigation="http://schemas.android.com/apk/res/com.app.onenet"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <com.app.onenet.widget.NavigationView
+        android:id="@+id/navigationView"
+        android:layout_width="fill_parent"
+        android:layout_height="45dip"
+        navigation:left_drawable="@drawable/title_back"
+        navigation:right_drawable="@drawable/title_home"
+        navigation:tv_title="@string/app_title_profilehome_activity" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/rl_top_contain"
+            android:layout_width="fill_parent"
+            android:layout_height="90dp"
+            android:orientation="vertical" >
+
+            <FrameLayout
+                android:id="@+id/ft_portrait_contain"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true" >
+
+                <ImageView
+                    android:id="@+id/iv_user_portrait_icon"
+                    style="@style/mid_portrait"
+                    android:contentDescription="@string/app_name" />
+
+                <ImageView
+                    android:id="@+id/iv_user_vip_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|right"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/portrait_v" />
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@id/ft_portrait_contain"
+                android:orientation="vertical" >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical" >
+
+                    <TextView
+                        android:id="@+id/tv_user_nick"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="娃娃三牛"
+                        android:textColor="@android:color/secondary_text_light"
+                        android:textSize="16dip"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/iv_user_sex_icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@id/tv_user_nick"
+                        android:contentDescription="@string/app_name"
+                        android:src="@drawable/user_info_male" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/tv_user_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:autoLink="web|phone|email"
+                    android:text="安东济宁"
+                    android:textColor="@android:color/secondary_text_light"
+                    android:textSize="12dip" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <Button
+                        android:id="@+id/btn_follow_op"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="加关注" />
+
+                    <Button
+                        android:id="@+id/btn_msg_op"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="私 信" />
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/tv_user_describe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="marquee"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:maxLength="25"
+            android:scrollHorizontally="true"
+            android:singleLine="true"
+            android:text="个人简介：安东济宁安东济宁安东济宁安东济宁安东济宁安东济宁安东济宁安东济宁安东济宁安东济宁安东济宁"
+            android:textColor="@android:color/secondary_text_light"
+            android:textSize="12dip" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/home_index_arrow" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1.0px"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/base_shape_line" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:id="@+id/lt_fans_contain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:drawable/btn_default"
+            android:clickable="true"
+            android:focusable="true"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:text="粉丝数" />
+
+            <TextView
+                android:id="@+id/tv_fans_count"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:text="1200"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lt_friends_contain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:drawable/btn_default"
+            android:clickable="true"
+            android:focusable="true"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:text="关注数" />
+
+            <TextView
+                android:id="@+id/tv_friends_count"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:text="1200"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lt_comments_contain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:drawable/btn_default"
+            android:clickable="true"
+            android:focusable="true"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:text="评论数" />
+
+            <TextView
+                android:id="@+id/tv_comments_count"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:text="1200"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/tv_weibo_count_tip"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="共..条微博" />
+    </LinearLayout>
+
+</LinearLayout>

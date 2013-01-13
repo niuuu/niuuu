@@ -1,0 +1,14 @@
+<resources>
+
+    <dimen name="padding_small">8dp</dimen>
+    <dimen name="padding_medium">10dp</dimen>
+    <dimen name="padding_large">16dp</dimen>
+    <dimen name="group_item_height">40.0dip</dimen>
+    <dimen name="bottom_tab_padding_drawable">2.0dip</dimen>
+    <dimen name="bottom_tab_padding_up">5.0dip</dimen>
+    <dimen name="bottom_tab_font_size">10.0dip</dimen>
+    <dimen name="setting_item_height">43dip</dimen>
+    <dimen name="setting_item_padding">10dp</dimen>
+    <dimen name="setting_item_tip_font_size">18dp</dimen>
+   
+</resources>

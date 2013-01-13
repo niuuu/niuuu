@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+    <color name="button_unselected">#ff54acea</color>
+    <color name="button_selected">#ff419de4</color>
+    <color name="shape_line">#ffcccccc</color>
+    <color name="gold">#b89766</color>
+    <color name="select">#98aacc</color>
+    <color name="transparent">#00000000</color>
+    
+    <color name="p_bg">#fff1f3f5</color>
+
+</resources>

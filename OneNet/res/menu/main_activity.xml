@@ -1,0 +1,9 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/menu_settings"
+        android:title="@string/menu_settings" android:alphabeticShortcut="s"/>
+    <item  android:id="@+id/menu_feedback" android:title="@string/menu_feedback" android:alphabeticShortcut="f"/>
+    <item  android:id="@+id/menu_about" android:title="@string/menu_about" android:alphabeticShortcut="a"/>
+    <item  android:id="@+id/menu_account" android:title="@string/menu_account_bind" android:alphabeticShortcut="b"/>
+    <item  android:id="@+id/menu_exit" android:title="@string/menu_exit" android:alphabeticShortcut="e"/>
+    
+</menu>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+    <TextView android:id="@+id/pell_first_hint" 
+        android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:textSize="24sp"
+		android:background="@color/p_bg"
+		android:paddingLeft="5dp"
+		android:visibility="gone"
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dip"
+        android:clickable="true" >
+
+        <ImageView
+            android:id="@+id/iv_user_portrait_icon"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dip"
+            style="@style/small_portrait"/>
+
+        <ImageView
+            android:id="@+id/iv_right_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dip"
+            android:paddingLeft="5dip"
+            android:src="@drawable/home_index_arrow" />
+
+        <LinearLayout
+            android:id="@+id/lt_mid_contain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@id/iv_user_portrait_icon"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/iv_user_portrait_icon"
+            android:layout_toLeftOf="@id/iv_right_arrow"
+            android:orientation="vertical"
+            android:paddingLeft="5dip" 
+            
+            >
+
+            <TextView
+                android:id="@+id/tv_user_nick"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/activity_tab_home"
+                android:textColor="@android:color/secondary_text_light"
+                android:textSize="16dip"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_last_weibo_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好"
+                android:textColor="@android:color/secondary_text_light"
+                android:textSize="12dip" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

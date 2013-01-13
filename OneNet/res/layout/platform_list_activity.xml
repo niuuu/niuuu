@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:navigation="http://schemas.android.com/apk/res/com.app.onenet"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:gravity="fill_vertical"
+    android:orientation="vertical" >
+    <com.app.onenet.widget.NavigationView
+        android:id="@+id/navigationView"
+        android:layout_width="fill_parent"
+        android:layout_height="45dip"
+        navigation:left_drawable="@drawable/title_back"
+        navigation:right_drawable="@drawable/title_home"
+        navigation:tv_title="@string/app_title_platform_activity" />
+    <ListView
+        android:id="@+id/lv_platform_list"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_margin="30dp" />
+
+</LinearLayout>

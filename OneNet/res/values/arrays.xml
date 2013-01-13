@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="item_menu">
+        <item>@string/item_menu_forward</item>
+        <item>@string/item_menu_forward_original</item>
+        <item>@string/item_menu_comment</item>
+        <item>@string/item_menu_fav</item>
+        <item>@string/item_menu_userinfo</item>
+        <item>@string/item_menu_view_way</item>
+    </array>
+     <array name="item_menu_1">
+        <item>@string/item_menu_forward</item>
+        <item>@string/item_menu_comment</item>
+        <item>@string/item_menu_fav</item>
+    </array>
+     <array name="item_insert_dialog_pic">
+        <item>@string/item_menu_dialog_pic</item>
+        <item>@string/item_menu_dialog_camera</item>
+    </array>
+     <array name="item_insert_dialog_topic">
+        <item>@string/item_menu_dialog_create_topic</item>
+        <item>@string/item_menu_dialog_sys_topic</item>
+    </array>
+</resources>

@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" 
+    xmlns:navigation="http://schemas.android.com/apk/res/com.app.onenet"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    >
+    <com.app.onenet.widget.NavigationView
+        android:id="@+id/navigationView"
+        android:layout_width="fill_parent"
+        android:layout_height="45dip"
+        navigation:tv_title="@string/app_title_personhome_activity" />
+    
+  
+    <ScrollView 
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:fillViewport="true" 
+    android:layout_marginTop="45dp"
+    >
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+         
+            android:padding="10dp" >
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/tv_person_account_tip"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="10dp"
+                    android:text="帐号"
+                    android:textSize="18dp" />
+
+                <Button
+                    android:id="@+id/tv_person_account_add"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:text="添加绑定帐号" />
+            </RelativeLayout>
+
+            <com.app.onenet.widget.CornerListView
+                android:id="@id/lv_my_account_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:divider="@drawable/app_divider_h_gray" >
+            </com.app.onenet.widget.CornerListView>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/tv_person_account_tip"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="10dp"
+                    android:text="微博"
+                    android:textSize="18dp" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/corner_list_bg"
+                    android:orientation="vertical" >
+
+                    <RelativeLayout
+                        android:id="@+id/lt_option_about"
+                        android:layout_width="match_parent"
+                        android:layout_height="61dip"
+                        android:background="@drawable/corner_list_first_item"
+                        android:clickable="true"
+                        android:onClick="onclicListener" >
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="15dip"
+                            android:orientation="vertical" >
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="我的微博"
+                                android:textColor="@android:color/secondary_text_light"
+                                android:textSize="18dip" />
+                        </LinearLayout>
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="15dip"
+                            android:src="@drawable/home_index_arrow" />
+
+                        <ImageView
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:background="@drawable/app_divider_h_gray" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/lt_option_about"
+                        android:layout_width="match_parent"
+                        android:layout_height="61dip"
+                        android:background="@drawable/corner_list_item"
+                        android:clickable="true"
+                        android:onClick="onclicListener" >
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="15dip"
+                            android:orientation="vertical" >
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="我的收藏"
+                                android:textColor="@android:color/secondary_text_light"
+                                android:textSize="18dip" />
+                        </LinearLayout>
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="15dip"
+                            android:src="@drawable/home_index_arrow" />
+
+                        <ImageView
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:background="@drawable/app_divider_h_gray" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/lt_option_about"
+                        android:layout_width="match_parent"
+                        android:layout_height="61dip"
+                        android:background="@drawable/corner_list_last_item"
+                        android:clickable="true"
+                        android:onClick="onclicListener" >
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="15dip"
+                            android:orientation="vertical" >
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="草稿箱（12）"
+                                android:textColor="@android:color/secondary_text_light"
+                                android:textSize="18dip" />
+                        </LinearLayout>
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="15dip"
+                            android:src="@drawable/home_index_arrow" />
+
+                        <ImageView
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:background="@drawable/app_divider_h_gray" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_person_account_tip"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="10dp"
+                    android:text="提醒"
+                    android:textSize="18dp" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/corner_list_bg"
+                    android:orientation="vertical" >
+
+                    <RelativeLayout
+                        android:id="@+id/lt_option_about"
+                        android:layout_width="match_parent"
+                        android:layout_height="61dip"
+                        android:background="@drawable/corner_list_first_item"
+                        android:clickable="true"
+                        android:onClick="onclicListener" >
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="15dip"
+                            android:orientation="vertical" >
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="关注提醒"
+                                android:textColor="@android:color/secondary_text_light"
+                                android:textSize="18dip" />
+                        </LinearLayout>
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="15dip"
+                            android:src="@drawable/home_index_arrow" />
+
+                        <ImageView
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:background="@drawable/app_divider_h_gray" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/lt_option_about"
+                        android:layout_width="match_parent"
+                        android:layout_height="61dip"
+                        android:background="@drawable/corner_list_last_item"
+                        android:clickable="true"
+                        android:onClick="onclicListener" >
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="15dip"
+                            android:orientation="vertical" >
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="提醒"
+                                android:textColor="@android:color/secondary_text_light"
+                                android:textSize="18dip" />
+                        </LinearLayout>
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="15dip"
+                            android:src="@drawable/home_index_arrow" />
+
+                        <ImageView
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:background="@drawable/app_divider_h_gray" />
+                    </RelativeLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+</ScrollView>
+    
+    
+</FrameLayout>

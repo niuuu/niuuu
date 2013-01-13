@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="vertical" >
+
+        <FrameLayout
+            android:id="@+id/ft_portrait_contain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true" >
+
+            <ImageView
+                android:id="@+id/iv_account_icon"
+                style="@style/small_portrait"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_margin="10dp" />
+
+            <ImageView
+                android:id="@+id/iv_platform_icon"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="bottom|right"
+                android:src="@drawable/user_info_male" />
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/ft_portrait_contain"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/tv_account_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:paddingLeft="10dp"
+                    android:text="****"
+                    android:textColor="@android:color/secondary_text_light"
+                    android:textSize="16dip"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/tv_account_weibo_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:paddingLeft="10dp"
+                    android:text="微博数："
+                    android:textColor="@android:color/secondary_text_light"
+                    android:textSize="12dip" />
+
+                <TextView
+                    android:id="@+id/tv_account_fans_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_toRightOf="@id/tv_account_weibo_count"
+                    android:paddingLeft="10dp"
+                    android:text="粉丝数："
+                    android:textColor="@android:color/secondary_text_light"
+                    android:textSize="12dip" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/tv_account_follow_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:paddingLeft="10dp"
+                    android:text="关注数："
+                    android:textColor="@android:color/secondary_text_light"
+                    android:textSize="12dip" />
+
+                <TextView
+                    android:id="@+id/tv_account_fav_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_toRightOf="@id/tv_account_follow_count"
+                    android:paddingLeft="10dp"
+                    android:text="收藏数："
+                    android:textColor="@android:color/secondary_text_light"
+                    android:textSize="12dip" />
+            </RelativeLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

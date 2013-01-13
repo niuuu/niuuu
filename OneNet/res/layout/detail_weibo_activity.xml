@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:navigation="http://schemas.android.com/apk/res/com.app.onenet"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <com.app.onenet.widget.NavigationView
+        android:id="@+id/navigationView"
+        android:layout_width="fill_parent"
+        android:layout_height="45dip"
+        navigation:left_drawable="@drawable/title_back"
+        navigation:right_drawable="@drawable/title_home"
+        navigation:tv_title="@string/app_title_detailweibo_activity" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:id="@+id/rl_top_contain"
+                android:layout_width="fill_parent"
+                android:layout_height="90dp"
+                android:background="@drawable/base_select_list"
+                android:orientation="vertical" >
+
+                <ImageView
+                    android:id="@+id/iv_user_portrait_icon"
+                    style="@style/mid_portrait"
+                    android:layout_alignParentLeft="true"
+                    android:contentDescription="@string/app_name" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@id/iv_user_portrait_icon"
+                    android:clickable="true"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/tv_nick_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="娃娃三牛"
+                        android:textColor="@android:color/secondary_text_light"
+                        android:textSize="16dip"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_user_address"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:autoLink="web|phone|email"
+                        android:text=""
+                        android:textColor="@android:color/secondary_text_light"
+                        android:textSize="12dip" />
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dip"
+                    android:background="@drawable/home_index_arrow" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1.0px"
+                    android:layout_alignParentBottom="true"
+                    android:background="@drawable/base_shape_line" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rl_top_contain" >
+
+                <include layout="@layout/weibo_layout" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true" >
+
+                <!--
+                <LinearLayout
+                    android:id="@+id/datail_bottom_refresh"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@drawable/maintab_toolbar_bg"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+ 
+                    <LinearLayout
+                        android:id="@+id/datail_bottom_refresh"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <ImageView
+                            android:id="@+id/iv_refresh"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:layout_weight="1.0"
+                            android:src="@drawable/title_home" />
+
+                        <ImageView
+                            android:id="@+id/iv_comment"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:layout_weight="1.0"
+                            android:src="@drawable/title_home" />
+
+                        <ImageView
+                            android:id="@+id/iv_forward"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:layout_weight="1.0"
+                            android:src="@drawable/title_home" />
+
+                        <ImageView
+                            android:id="@+id/iv_fav"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:layout_weight="1.0"
+                            android:src="@drawable/title_home" />
+
+                        <ImageView
+                            android:id="@+id/iv_more"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:layout_weight="1.0"
+                            android:src="@drawable/title_home" />
+                    </LinearLayout>
+               
+                </LinearLayout>
+                -->
+            </LinearLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+
+</LinearLayout>
